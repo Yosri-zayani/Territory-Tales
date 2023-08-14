@@ -53,7 +53,7 @@ const CountryPage = ({ countryData, on, setOn, searchTerm, setCountry, active })
           <div className="flex flex-col sm:flex-row w-full sm:space-x-8">
             
             {/* Left Side Info */}
-            <div className="flex flex-col space-y-2 w-full sm:w-1/2 pl-4 sm:pl-24 pt-4 sm:pt-16">
+            <div className="flex flex-col space-y-2 w-full sm:w-1/2 pl-4 sm:pl-24 pt-2 sm:pt-16">
               <div className="text-2xl font-bold pb-8">{country.name}</div>
               <div><b>Native Name:</b> {country.nativeName}</div>
               <div><b>Population:</b> {country.population.toLocaleString()}</div>
@@ -71,14 +71,14 @@ const CountryPage = ({ countryData, on, setOn, searchTerm, setCountry, active })
           </div>
 
           {/* Border Countries */}
-          <div className="w-full pt-16 sm:pl-48 sm:flex">
+          <div className="w-full pl-4 pt-8 sm:pl-48 sm:flex">
             <b className=" pt-4 pr-4">Border countries:</b>
             <div className="flex  space-x-4 mt-4 sm:space-x-4 sm:mt-0">
               {country.borderCountries && country.borderCountries.length ? (
                 country.borderCountries.map((border) => (
                   <div
                     key={border}
-                    className={`hover:cursor-pointer p-4 shadow-2xl rounded ${active ? "bg-DarkBlue text-VeryLightGray" : "text-DarkBlue bg-VeryLightGray"}`}
+                    className={`hover:cursor-pointer text-center sm:mt-3 h-8 sm:px-4 sm:py-1 overflow-hidden  font-thin shadow-2xl rounded ${active ? "bg-DarkBlue text-VeryLightGray" : "text-DarkBlue bg-VeryLightGray"}`}
                     onClick={() => handleBorderClick(border)}
                   >
                     {countryData.find((c) => c.alpha3Code === border)?.name}

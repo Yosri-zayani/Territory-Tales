@@ -35,7 +35,7 @@ const DisplayArea = ({ countryData, setCountry, setOn, themetoggle }) => {
   return (
     <div className="px-8 py-4">
       {/* Filter Dropdown */}
-      <div className="w-full sm:w-[40%]">
+      <div className="w-full sm:w-[25%] sm:right-8 sm:absolute top-16">
         <FilterDropdown
           setSelectedRegion={setSelectedRegion}
           themetoggle={themetoggle}
@@ -47,7 +47,7 @@ const DisplayArea = ({ countryData, setCountry, setOn, themetoggle }) => {
         {/* Loop through countries to display each country card */}
         {countries.map((country) => (
           <div
-            className="shadow-xl w-full sm:w-[23%] rounded-lg mb-8 cursor-pointer"
+            className="shadow-xl w-full sm:w-[22%] rounded-lg mb-8 cursor-pointer"
             key={country.name}
             onClick={() => {
               setCountry(country.name);
