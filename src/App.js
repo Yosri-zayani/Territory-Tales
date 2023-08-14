@@ -10,7 +10,7 @@ const App = () => {
   const [on, setOn] = useState(false);
   
   // State for toggling theme (dark/light)
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   
   // State to hold selected country's name
   const [country, setCountry] = useState('');
